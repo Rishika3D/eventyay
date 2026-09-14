@@ -34,7 +34,7 @@ def make_events_public_and_indexed(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('base', '0070_alter_voucher_budget_alter_voucher_value'),
+        ('base', '0073_loungemeshaccesstoken_loungemeshserver_and_more'),
     ]
 
     operations = [
