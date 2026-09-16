@@ -1,14 +1,3 @@
-# Data migration for #5551.
-#
-# The "Show in search results and lists" (is_public) and "Ask search engines not to
-# index" (meta_noindex) toggles were removed from the event settings UI, and events are
-# now public and indexed by default. Existing events that had been hidden through those
-# toggles would otherwise be stranded — invisible in lists/search with no UI to re-enable
-# them — so bring them back to the default public/indexed state.
-#
-# Meetups deliberately use these fields for their own privacy control (identified by the
-# ``event_type=meetup`` setting and driven by the separate ``privacy_type`` field), so
-# they are left untouched.
 from django.db import migrations
 
 
@@ -34,7 +23,7 @@ def make_events_public_and_indexed(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('base', '0073_loungemeshaccesstoken_loungemeshserver_and_more'),
+        ('base', '0074_bbbserver_disable_ssl_janusserver_disable_ssl_and_more'),
     ]
 
     operations = [
