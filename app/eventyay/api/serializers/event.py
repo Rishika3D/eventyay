@@ -143,8 +143,7 @@ class EventSerializer(I18nAwareModelSerializer):
             'valid_keys',
             'sales_channels',
         )
-        # is_public is no longer user-settable (the UI toggle was removed and events are
-        # public by default); keep it readable but reject writes via the API.
+
         read_only_fields = ('is_public',)
 
     def __init__(self, *args, **kwargs):
