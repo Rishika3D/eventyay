@@ -23,7 +23,7 @@ def make_events_public_and_indexed(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('base', '0082_speakerinvitation'),
+        ('base', '0084_voucher_all_addons_bundles_included'),
     ]
 
     operations = [
